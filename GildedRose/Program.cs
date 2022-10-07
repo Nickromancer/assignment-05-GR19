@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace GildedRose
 {
-    class Program
+    public  class Program
     {
-        IList<Item> Items;
+        public IList<Item> Items;
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
@@ -38,7 +38,10 @@ namespace GildedRose
                     Quality = 49
                 },
 				// this conjured item does not work properly yet
-				new Item { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6 }
+				new Item { 
+                    Name = "Conjured Mana Cake", 
+                    SellIn = 3, 
+                    Quality = 6 }
                                           }
 
                           };
@@ -62,17 +65,22 @@ namespace GildedRose
             for (var i = 0; i < Items.Count; i++)
             {
                 if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
+                { 
                     if (Items[i].Quality > 0)
                     {
                         if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                         {
                             Items[i].Quality = Items[i].Quality - 1;
                         }
+                        //Conjured Update
+                        if (Items[i].Name.Contains("Conjured")) 
+                        {
+                            Items[i].Quality = Items[i].Quality - 1;
+                        }
                     }
                 }
                 else
-                {
+                {   //When ages brie get degraded, it increase quality
                     if (Items[i].Quality < 50)
                     {
                         Items[i].Quality = Items[i].Quality + 1;
@@ -115,6 +123,11 @@ namespace GildedRose
                                 {
                                     Items[i].Quality = Items[i].Quality - 1;
                                 }
+
+                                if (Items[i].Name.Contains("Conjured")) 
+                                {
+                                    Items[i].Quality = Items[i].Quality - 1;
+                                }
                             }
                         }
                         else
@@ -124,6 +137,7 @@ namespace GildedRose
                     }
                     else
                     {
+                        //If item i Brie
                         if (Items[i].Quality < 50)
                         {
                             Items[i].Quality = Items[i].Quality + 1;
@@ -135,7 +149,7 @@ namespace GildedRose
 
     }
 
-    public class Item
+    public  class Item
     {
         public string Name { get; set; }
 
