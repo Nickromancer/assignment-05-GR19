@@ -1,0 +1,126 @@
+SF:c:\Users\Nicky\Desktop\University\3. Semester\BDSA\assignment-05-GR19\GildedRose\Program.cs
+FN:9,System.Void GildedRose.Program::Main(System.String[])
+FNDA:0,System.Void GildedRose.Program::Main(System.String[])
+DA:10,0
+DA:62,0
+FN:63,System.Void GildedRose.Program::UpdateQuality()
+FNDA:0,System.Void GildedRose.Program::UpdateQuality()
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:80,0
+DA:81,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:131,0
+DA:132,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:139,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+BRDA:65,899,1,0
+BRDA:67,36,0,0
+BRDA:67,36,1,0
+BRDA:67,70,0,0
+BRDA:69,95,0,0
+BRDA:71,127,0,0
+BRDA:71,127,1,0
+BRDA:69,95,1,0
+BRDA:67,70,1,0
+BRDA:84,201,0,0
+BRDA:88,275,0,0
+BRDA:90,306,0,0
+BRDA:92,334,0,0
+BRDA:92,334,1,0
+BRDA:90,306,1,0
+BRDA:98,400,0,0
+BRDA:100,428,0,0
+BRDA:100,428,1,0
+BRDA:98,400,1,0
+BRDA:88,275,1,0
+BRDA:84,201,1,0
+BRDA:109,504,0,0
+BRDA:109,504,1,0
+BRDA:114,569,0,0
+BRDA:116,606,0,0
+BRDA:118,643,0,0
+BRDA:120,670,0,0
+BRDA:122,704,0,0
+BRDA:122,704,1,0
+BRDA:120,670,1,0
+BRDA:118,643,1,0
+BRDA:116,606,1,0
+BRDA:141,833,0,0
+BRDA:141,833,1,0
+BRDA:114,569,1,0
+BRDA:65,899,0,0
+FN:153,System.String GildedRose.Item::get_Name()
+FNDA:0,System.String GildedRose.Item::get_Name()
+DA:154,0
+FN:155,System.Int32 GildedRose.Item::get_SellIn()
+FNDA:0,System.Int32 GildedRose.Item::get_SellIn()
+DA:156,0
+FN:157,System.Int32 GildedRose.Item::get_Quality()
+FNDA:0,System.Int32 GildedRose.Item::get_Quality()
+DA:158,0
+LF:72
+LH:0
+BRF:36
+BRH:0
+FNF:5
+FNH:0
+end_of_record
