@@ -5,10 +5,23 @@ namespace GildedRose
 {
     public  class Program
     {
-        public IList<Item>? Items;
+        private IList<Item>? items;
+        private List<ShopItem>? shopItems = new List<ShopItem>();
+        public IList<Item>? Items {get => Items;
+            set
+            {
+                items = value;
+                foreach(Item item in value!)
+                {
+                    ShopItem shopItem = ShopItemFactory.CreateItem(item);
+                    shopItems?.Add(shopItem);
+                }
+            }
+        }
+        
         static void Main(string[] args)
         {
-            /* System.Console.WriteLine("OMGHAI!");
+             System.Console.WriteLine("OMGHAI!");
 
             var app = new Program()
                           {
@@ -56,13 +69,17 @@ namespace GildedRose
                 }
                 Console.WriteLine("");
                 app.UpdateQuality();
-            }
+            }  
 
- */
         }
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items!.Count; i++)
+            foreach(var shopItem in shopItems!)
+            {
+                shopItem.PassDay();
+            }
+            //Legacy code
+            /* for (var i = 0; i < Items!.Count; i++)
             {
                 if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                 { 
@@ -73,10 +90,10 @@ namespace GildedRose
                             Items[i].Quality = Items[i].Quality - 1;
                         }
                         //Conjured Update
-/*                         if (Items[i].Name!.Contains("Conjured")) 
+                        if (Items[i].Name!.Contains("Conjured")) 
                         {
                             Items[i].Quality = Items[i].Quality - 1;
-                        } */
+                        }
                     }
                 }
                 else
@@ -123,10 +140,10 @@ namespace GildedRose
                                 {
                                     Items[i].Quality = Items[i].Quality - 1;
                                 }
-/*                                 if (Items[i].Name!.Contains("Conjured")) 
+                                if (Items[i].Name!.Contains("Conjured")) 
                                 {
                                     Items[i].Quality = Items[i].Quality - 1;
-                                } */
+                                } 
                             }
                         }
                         else
@@ -136,16 +153,15 @@ namespace GildedRose
                     }
                     else
                     {
-                        //If item i Brie
+                        
                         if (Items[i].Quality < 50)
                         {
                             Items[i].Quality = Items[i].Quality + 1;
                         }
                     }
                 }
-            }
+            } */
         }
-
     }
 
     public class Item
@@ -156,5 +172,4 @@ namespace GildedRose
 
         public int Quality { get; set; }
     }
-
 }
